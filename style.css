@@ -17,7 +17,7 @@ body {
   font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
-  background: #2a3538c4 !important;
+  background: #ced6d8b7 !important;
 }
 
 .navbar-nav li {
@@ -39,12 +39,12 @@ body {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #8fd3f4;
+  color: #0095da;
 }
 
 .home-inner {
-  background-image: url("img/niebo.jpg");
-  filter: brightness(70%);
+  background-image: url("img/sky.jpg");
+  filter: brightness(100%);
 }
 
 .caption {
@@ -138,7 +138,7 @@ body {
 
 .sec5 {
   padding: 20px;
-  background-image: linear-gradient(120deg, #0289aa 0%, #8fd3f4 100%);
+  background-image: linear-gradient(120deg, #1daace 0%, #8fd3f4 100%);
 }
 
 .sec6 {
@@ -169,3 +169,7 @@ footer {
     width: 95%;
   }
 }
+
+/* form! */
+
+/* Style the form */
