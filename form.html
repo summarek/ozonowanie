@@ -94,7 +94,7 @@
 
       .container {
         width: 100%;
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto;
         position: relative;
       }
@@ -200,7 +200,7 @@
         bottom: 20px;
       }
       .pre-button {
-        right: 130px;
+        right: 150px;
       }
 
       .form-wrapper .submit {
@@ -280,14 +280,15 @@
     <div class="container">
       <div class="wrapper">
         <ul class="steps">
-          <li class="is-active">Step 1</li>
-          <li>Step 2</li>
-          <li>Step 3</li>
+          <li class="is-active">Krok 1</li>
+          <li>Krok 2</li>
+          <li class="step3">Krok 3</li>
+          <li>Krok 4</li>
         </ul>
         <form class="form-wrapper">
           <fieldset class="section is-active">
             <h3>Co chcesz zdezynfekować?</h3>
-            <div class="row cf">
+            <div class="row cf" style="display: flex; justify-content: center;">
               <div class="four col">
                 <input type="radio" name="r1" id="r1" checked />
                 <label for="r1">
@@ -300,38 +301,141 @@
                 </label>
               </div>
             </div>
-            <div class="pre-button">Previous</div>
-
-            <div class="next-button">Next</div>
+            <div class="pre-button">Wróć</div>
+            <div class="next-button">Następny</div>
           </fieldset>
-          <fieldset class="section">
-            <h3>Your Details</h3>
-            <input type="text" name="name" id="name" placeholder="Name" />
-            <input type="text" name="email" id="email" placeholder="Email" />
-            <div class="pre-button">Previous</div>
 
-            <div class="next-button">Next</div>
+          <fieldset class="section step2">
+            <h3>Wybierz rodzaj nieruchomości</h3>
+            <div class="row cf">
+              <div class="four col">
+                <input type="radio" name="r2" id="r3" checked />
+                <label for="r3">
+                  <h4>Mieszkanie</h4>
+                </label>
+              </div>
+              <div class="four col">
+                <input type="radio" name="r2" id="r4" /><label for="r4">
+                  <h4>Dom</h4>
+                </label>
+              </div>
+              <div class="four col">
+                <input type="radio" name="r2" id="r5" /><label for="r5">
+                  <h4>Lokal handlowo/usługowy</h4>
+                </label>
+              </div>
+              <div class="four col" style="margin-left: 0; margin-top: 10px;">
+                <input type="radio" name="r2" id="r6" /><label for="r6">
+                  <h4>Inne</h4>
+                </label>
+              </div>
+              <input
+                type="text"
+                name="inne"
+                id="inne"
+                placeholder="Wpisz rodzaj nieruchomość"
+                style="margin-top: 95px;"
+                disabled
+              />
+            </div>
+
+            <div class="pre-button">Wróć</div>
+            <div class="next-button">Następny</div>
           </fieldset>
-          <fieldset class="section">
-            <h3>Choose a Password</h3>
+          <fieldset class="section step3 fieldset3">
+            <h3>Informacje o nieruchomości</h3>
             <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
+              type="text"
+              name="metraz"
+              id="metraz"
+              placeholder="Łączny metraż"
             />
             <input
-              type="password"
-              name="password2"
-              id="password2"
-              placeholder="Re-enter Password"
+              type="text"
+              name="kondygnacje"
+              id="kondygnacje"
+              placeholder="Ilość kondygnacji"
             />
-            <input class="submit button" type="submit" value="Sign Up" />
+            <input
+              type="text"
+              name="wyspomieszczen"
+              id="wyspomieszczen"
+              placeholder="Wysokość pomieszczeń (uzupełnić jeżeli wyższa niż 2,8m)"
+            />
+
+            <div class="pre-button">Wróć</div>
+            <div class="next-button">Następny</div>
           </fieldset>
           <fieldset class="section">
-            <h3>Account Created!</h3>
-            <p>Your account has now been created.</p>
-            <div class="button">Reset Form</div>
+            <h3>Adres obiektu:</h3>
+            <input
+              type="text"
+              name="ulica"
+              id="ulica"
+              placeholder="Ulica, numer budynku"
+              required
+            />
+            <input
+              type="text"
+              name="miejscowosc"
+              id="miejscowosc"
+              placeholder="Miejscowość"
+              required
+            />
+            <input
+              type="text"
+              name="postcode"
+              id="postcode"
+              placeholder="Kod pocztowy"
+              required
+            />
+
+            <h3 style="margin-bottom: 10px;">Dane kontaktowe</h3>
+            <h5 style="margin-top: 10px;">
+              Uzupełnij aby otrzymać wstępną wycenę
+            </h5>
+            <input
+              type="text"
+              name="numertel"
+              id="numertel"
+              placeholder="Numer telefonu"
+              required
+            />
+            <input
+              type="text"
+              name="adresemail"
+              id="adresemail"
+              placeholder="Adres email"
+              required
+            />
+            <input
+              type="text"
+              name="postcode"
+              id="postcode"
+              placeholder="Kod pocztowy"
+              required
+            />
+            <input
+              type="text"
+              name="dodatkoweinfo"
+              id="dodatkoweinfo"
+              placeholder="Dodatkowe Informacje"
+              style="margin-bottom: 40px;"
+            />
+            <div class="pre-button" style="right: 130px; bottom: 15px;">
+              Wróć
+            </div>
+
+            <input
+              class="submit button"
+              type="submit"
+              value="Wyślij!"
+              style="bottom: 15px;"
+            />
+          </fieldset>
+          <fieldset class="section">
+            <h3>Wiadomość wysłana!</h3>
+            <p>Wkrótce się z Tobą skontaktujemy!</p>
           </fieldset>
         </form>
       </div>
@@ -339,10 +443,10 @@
 
     <script>
       var step = 0;
+      var fieldset3 = document.querySelector(".fieldset3");
 
       document.querySelectorAll(".next-button").forEach((el) => {
         el.addEventListener("click", function (event) {
-          console.log(event);
           document
             .querySelectorAll("fieldset")
             [step].classList.remove("is-active");
@@ -353,7 +457,6 @@
             [step].classList.add("is-active");
           document.querySelectorAll("li")[step].classList.add("is-active");
         });
-        console.log(step);
       });
 
       document.querySelectorAll(".pre-button").forEach((el) => {
@@ -369,8 +472,99 @@
               [step].classList.add("is-active");
             document.querySelectorAll("li")[step].classList.add("is-active");
           }
-          console.log(event);
         });
+      });
+      document.querySelector("#r6").addEventListener("click", (e) => {
+        document.getElementById("inne").disabled = false;
+      });
+
+      // document.querySelector(".form-wrapper").submit(function (e) {
+      //   e.preventDefault();
+      // });
+
+      document.querySelector("#r1").addEventListener("click", (e) => {
+        document.querySelector(
+          ".steps"
+        ).innerHTML = `<li class="is-active">Krok 1</li>
+          <li>Krok 2</li>
+          <li class="step3">Krok 3</li>
+          <li>Krok 4</li>`;
+
+        document.querySelector(".step2 h3").innerHTML = `
+            Wybierz rodzaj nieruchomości
+
+          `;
+        document.querySelector(
+          ".step2 .row"
+        ).innerHTML = `<div class="four col">
+                <input type="radio" name="r2" id="r3" checked />
+                <label for="r3">
+                  <h4>Mieszkanie</h4>
+                </label>
+              </div>
+              <div class="four col">
+                <input type="radio" name="r2" id="r4" /><label for="r4">
+                  <h4>Dom</h4>
+                </label>
+              </div>
+              <div class="four col">
+                <input type="radio" name="r2" id="r5" /><label for="r5">
+                  <h4>Lokal handlowo/usługowy</h4>
+                </label>
+              </div>
+              <div class="four col" style="margin-left: 0; margin-top: 10px;">
+                <input type="radio" name="r2" id="r6" /><label for="r6">
+                  <h4>Inne</h4>
+                </label>
+              </div>
+              <input
+                type="text"
+                name="inne"
+                id="inne"
+                placeholder="Wpisz rodzaj nieruchomość"
+                style="margin-top: 95px;"
+                
+              />`;
+        document.querySelector(".step2 .row").style = "";
+
+        document.querySelector(".step2").after(fieldset3);
+      });
+
+      document.querySelector("#r2").addEventListener("click", (e) => {
+        document.querySelector(
+          ".steps"
+        ).innerHTML = `<li class="is-active">Krok 1</li>
+          <li>Krok 2</li>
+          <li>Krok 3</li>`;
+        document.querySelector(".step2 h3").innerHTML = `
+            Rodzaj pojazdu
+          `;
+        document.querySelector(".step2 .row").innerHTML = `
+
+              <div class="four col">
+                <input type="radio" name="r5" id="r8" checked />
+                <label for="r8">
+                  <h4>Osobowy/dostawczy do 9 osób</h4>
+                </label>
+              </div>
+              <div class="four col">
+                <input type="radio" name="r5" id="r9" /><label for="r9">
+                  <h4>Bus/autobus powyżej 9 osób</h4>
+                </label>
+              </div>
+
+            <input
+              type="text"
+              name="iloscpojazdow"
+              id="iloscpojazdow"
+              placeholder="Podaj ilość zaznaczonych pojazdów"
+              style="margin-bottom: 35px !important; margin-left:10px;"
+            />
+          `;
+        document.querySelector(".step2 .row").style =
+          "display: flex; justify-content: center;";
+        var krok3 = document.querySelector(".step3");
+        document.querySelector("form").removeChild(krok3);
       });
     </script>
   </body>
