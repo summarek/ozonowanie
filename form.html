@@ -285,18 +285,33 @@
           <li class="step3">Krok 3</li>
           <li>Krok 4</li>
         </ul>
-        <form class="form-wrapper">
+        <form
+          class="form-wrapper"
+          action="https://formspree.io/mgenwprl"
+          method="POST"
+        >
           <fieldset class="section is-active">
             <h3>Co chcesz zdezynfekować?</h3>
             <div class="row cf" style="display: flex; justify-content: center;">
               <div class="four col">
-                <input type="radio" name="r1" id="r1" checked />
-                <label for="r1">
+                <input
+                  type="radio"
+                  name="Obiekt"
+                  id="Nieruchomość"
+                  value="Nieruchomość"
+                  checked
+                />
+                <label for="Nieruchomość">
                   <h4>Nieruchomość</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r1" id="r2" /><label for="r2">
+                <input
+                  type="radio"
+                  name="Obiekt"
+                  id="Pojazd"
+                  value="Pojazd"
+                /><label for="Pojazd">
                   <h4>Pojazd</h4>
                 </label>
               </div>
@@ -309,23 +324,44 @@
             <h3>Wybierz rodzaj nieruchomości</h3>
             <div class="row cf">
               <div class="four col">
-                <input type="radio" name="r2" id="r3" checked />
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Mieszkanie"
+                  id="r3"
+                  checked
+                />
                 <label for="r3">
                   <h4>Mieszkanie</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r2" id="r4" /><label for="r4">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Dom"
+                  id="r4"
+                /><label for="r4">
                   <h4>Dom</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r2" id="r5" /><label for="r5">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Lokal_Handlowo/usługowy"
+                  id="r5"
+                /><label for="r5">
                   <h4>Lokal handlowo/usługowy</h4>
                 </label>
               </div>
               <div class="four col" style="margin-left: 0; margin-top: 10px;">
-                <input type="radio" name="r2" id="r6" /><label for="r6">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Inne"
+                  id="r6"
+                /><label for="r6">
                   <h4>Inne</h4>
                 </label>
               </div>
@@ -346,19 +382,19 @@
             <h3>Informacje o nieruchomości</h3>
             <input
               type="text"
-              name="metraz"
+              name="Metraż"
               id="metraz"
               placeholder="Łączny metraż"
             />
             <input
               type="text"
-              name="kondygnacje"
+              name="Ilość_Kondygnacji"
               id="kondygnacje"
               placeholder="Ilość kondygnacji"
             />
             <input
               type="text"
-              name="wyspomieszczen"
+              name="Wysokość_pomieszczeń"
               id="wyspomieszczen"
               placeholder="Wysokość pomieszczeń (uzupełnić jeżeli wyższa niż 2,8m)"
             />
@@ -370,21 +406,21 @@
             <h3>Adres obiektu:</h3>
             <input
               type="text"
-              name="ulica"
+              name="Ulica"
               id="ulica"
               placeholder="Ulica, numer budynku"
               required
             />
             <input
               type="text"
-              name="miejscowosc"
+              name="Miejscowość"
               id="miejscowosc"
               placeholder="Miejscowość"
               required
             />
             <input
               type="text"
-              name="postcode"
+              name="Kod_pocztowy"
               id="postcode"
               placeholder="Kod pocztowy"
               required
@@ -396,30 +432,24 @@
             </h5>
             <input
               type="text"
-              name="numertel"
+              name="Numer_telefonu_klienta"
               id="numertel"
               placeholder="Numer telefonu"
               required
             />
             <input
               type="text"
-              name="adresemail"
+              name="Adres_email_klienta"
               id="adresemail"
               placeholder="Adres email"
               required
             />
+
             <input
               type="text"
-              name="postcode"
-              id="postcode"
-              placeholder="Kod pocztowy"
-              required
-            />
-            <input
-              type="text"
-              name="dodatkoweinfo"
+              name="Dodatkowe_informacje"
               id="dodatkoweinfo"
-              placeholder="Dodatkowe Informacje"
+              placeholder="Dodatkowe Informacje/pytania"
               style="margin-bottom: 40px;"
             />
             <div class="pre-button" style="right: 130px; bottom: 15px;">
@@ -482,7 +512,7 @@
       //   e.preventDefault();
       // });
 
-      document.querySelector("#r1").addEventListener("click", (e) => {
+      document.querySelector("#Nieruchomość").addEventListener("click", (e) => {
         document.querySelector(
           ".steps"
         ).innerHTML = `<li class="is-active">Krok 1</li>
@@ -496,24 +526,45 @@
           `;
         document.querySelector(
           ".step2 .row"
-        ).innerHTML = `<div class="four col">
-                <input type="radio" name="r2" id="r3" checked />
+        ).innerHTML = ` <div class="four col">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Mieszkanie"
+                  id="r3"
+                  checked
+                />
                 <label for="r3">
                   <h4>Mieszkanie</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r2" id="r4" /><label for="r4">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Dom"
+                  id="r4"
+                /><label for="r4">
                   <h4>Dom</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r2" id="r5" /><label for="r5">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Lokal_Handlowo/usługowy"
+                  id="r5"
+                /><label for="r5">
                   <h4>Lokal handlowo/usługowy</h4>
                 </label>
               </div>
               <div class="four col" style="margin-left: 0; margin-top: 10px;">
-                <input type="radio" name="r2" id="r6" /><label for="r6">
+                <input
+                  type="radio"
+                  name="JakiObiekt"
+                  value="Inne"
+                  id="r6"
+                /><label for="r6">
                   <h4>Inne</h4>
                 </label>
               </div>
@@ -530,7 +581,7 @@
         document.querySelector(".step2").after(fieldset3);
       });
 
-      document.querySelector("#r2").addEventListener("click", (e) => {
+      document.querySelector("#Pojazd").addEventListener("click", (e) => {
         document.querySelector(
           ".steps"
         ).innerHTML = `<li class="is-active">Krok 1</li>
@@ -542,21 +593,21 @@
         document.querySelector(".step2 .row").innerHTML = `
 
               <div class="four col">
-                <input type="radio" name="r5" id="r8" checked />
-                <label for="r8">
+                <input type="radio" name="Pojazd" id="Osobowy/dostawczy" value="Osobowy/dostawczy" checked />
+                <label for="Osobowy/dostawczy">
                   <h4>Osobowy/dostawczy do 9 osób</h4>
                 </label>
               </div>
               <div class="four col">
-                <input type="radio" name="r5" id="r9" /><label for="r9">
+                <input type="radio" name="Pojazd" id="Bus/autobus" value="Bus/autobus" /><label for="Bus/autobus">
                   <h4>Bus/autobus powyżej 9 osób</h4>
                 </label>
               </div>
 
             <input
               type="text"
-              name="iloscpojazdow"
-              id="iloscpojazdow"
+              name="Ilość_pojazdów"
+              id="Ilość_pojazdów"
               placeholder="Podaj ilość zaznaczonych pojazdów"
               style="margin-bottom: 35px !important; margin-left:10px;"
             />
